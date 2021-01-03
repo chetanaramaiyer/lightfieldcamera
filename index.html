@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Chetana Ramaiyer</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Scaffold - v2.0.0
+  * Template URL: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex">
+        <div class="logo mr-auto">
+          <ul>
+            <li><width ="100%;"><img src="assets/img/curlyhair.png"></a> </li>
+            <li><h1 style="font-size:100%;"><a href="index.html"><span>Chetana Ramaiyer</span></a></h1></li>
+          </ul>
+        </div>
+
+      </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div> <p><br></p> <p><br></p> </div>
+        <div class="section-title" data-aos="fade-up">
+          <h1>[Auto]Stitching Photo Mosaics<br></h1>
+          <h5>Chetana Ramaiyer</h5>
+          <br></br>
+
+          <h3>Overview</h3>
+        </div>
+
+        <div class="overview" data-aos="fade-up">
+            <p>In this project, we are warping images that are taken from the same position but at different angles. We use these pictures to create a mosaic.
+                On the other hand, if the images are captured from the same center, you can
+                project them onto the same plane to create a panoramic picture.
+            </p>
+        </div>
+
+        <br></br>
+        <div class="section-title" data-aos="fade-up">
+             <h3>Step 1: Shoot the pictures</h3>
+             <p>This step is pretty self explanatory. I picked threee different sets of images where the images are taken from different angles.</p>
+        </div>
+
+        <br></br>
+        <h5> Mural oakland picture: </h5>
+        <div class="section-image" data-aos="fade-up">
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="data/oak1.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="data/oak2.jpg" class="img-fluid" alt="">
+                <p><br></p>
+            </div>
+        </div>
+        <h5> New York: </h5>
+        <div class="section-image" data-aos="fade-up">
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="data/ny1.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="data/ny2.jpg" class="img-fluid" alt="">
+                <p><br></p>
+            </div>
+
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="data/ny3.jpg" class="img-fluid" alt="">
+                <p><br></p>
+            </div>
+        </div>
+        <h5> My room: </h5>
+        <div class="section-image" data-aos="fade-up">
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="data/room1.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="data/room2.jpg" class="img-fluid" alt="">
+                <p><br></p>
+            </div>
+
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="data/room3.jpg" class="img-fluid" alt="">
+                <p><br></p>
+            </div>
+        </div>
+
+        <br></br>
+        <div class="section-title" data-aos="fade-up">
+             <h3>Step 2: Picking the points manually</h3>
+             <p>I selected 12 points in both images to map between the images. Here are the points:</p>
+        </div>
+        <h5>Picked points for Oakland images: </h5>
+        <div class="section-image" data-aos="fade-up">
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="data/oakpp1.png" class="img-fluid" alt="">
+            </div>
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="data/oakpp2.png" class="img-fluid" alt="">
+            </div>
+        </div>
+        <br></br>
+        <h5>Picked points for New York images: </h5>
+        <div class="section-image" data-aos="fade-up">
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="data/nypp1.png" class="img-fluid" alt="">
+            </div>
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="data/nypp2.png" class="img-fluid" alt="">
+                <p><br></p>
+            </div>
+
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="data/nypp3.png" class="img-fluid" alt="">
+                <p><br></p>
+            </div>
+        </div>
+        <br></br>
+        <div class="section-title" data-aos="fade-up">
+             <h3>Step 3: Homography and Warping</h3>
+             <p> A projective transformation is a linear transformation that warps an images with 8 degrees of freedom.
+                 Image projection from a fixed center of projection can be simulated by 2D image warping. In this part, we will compute the transformation matrix between one image to the other. This matrix is called the homography.</p>
+                 <div class="section-image" data-aos="fade-up">
+                     <div class="section-image-col" data-aos="fade-up">
+                         <img src="data/homograph_equation.png" class="img-fluid" alt="">
+                     </div>
+                 </div>
+            <p>This 3x3 homography matrix exists such that p' = Hp. Homography preserves straight lines but not parallelism. To find
+                 the matrix for the homography transformation, we have to select more than 4 pairs of corresponding
+                 coordinates (in my case, I picked 12). </p>
+            <p> After computing this homography matrix, I matrix multiply the homography matrix by the selected points in the image.
+                This results in the warped images (the source image's pixels adapted to fit the destination image)</p>
+        </div>
+        <h5>Warped Oakland and New York image: </h5>
+        <div class="section-image" data-aos="fade-up">
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="output/oakland_warped_image.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="section-image-col" data-aos="fade-up">
+                <img src="output/ny_warped_image.jpg" class="img-fluid" alt="" >
+                <p><br></p>
+            </div>
+        </div>
+
+
+        <br></br>
+        <div class="section-title" data-aos="fade-up">
+             <h3>Step 4: Image Rectification</h3>
+             <br></br>
+             <p> Image rectification is essentially trying to warp an object in an image that we know is a rectangle in reality but is not presented as such in the image due to the angle of the image. In this case, the window doesn't appear as a rectangle in the original image.
+             To rectify an image, I picked four points in the image that formed a square. Then I warped these selected points to four selected points [0 0; 0 1; 1 0; 1 1] that form a square. This rectification is used to test if the homography function works properly.
+              Originally the window was at a slant in the image, As you can see, in the rectified image the window is now shown in rectangular/planar way, </p>
+             <br></br>
+             <div class="section-image" data-aos="fade-up">
+                 <div class="section-image-col" data-aos="fade-up">
+                     <img src="data/oak1.jpg" class="img-fluid" alt="">
+                 </div>
+                 <div class="section-image-col" data-aos="fade-up">
+                     <img src="output/oak_rect.png" class="img-fluid" alt="" width = 400px>
+                 </div>
+             </div>
+        </div>
+        <br></br>
+        <div class="section-title" data-aos="fade-up">
+             <h3>Step 5: Blend the images into a mosaic</h3>
+             <p>To blend the images </p>
+        </div>
+
+        </section><!-- End Team Section -->
+
+
+  </main><!-- End #main -->
+
+
+  <a href="#" class="back-to-top"><i class="bx bxs-up-arrow-alt"></i></a>
+
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+    <footer id="footer">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Scaffold</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+
+    </footer><!-- End Footer -->
+
+</body>
+
+</html>
