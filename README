@@ -1,3 +1,12 @@
-# FINAL PROJECT 1: Lightfield
+## FINAL PROJECT 1: Lightfield
 
-# In order to run this project, you just have to open the main.ipynb in jupyter notebook and run all the cells. 
+## In order to run this project, you just have to open the main.ipynb in jupyter notebook and run all the cells. 
+
+## Overview
+#### In this project, we are working with light field data. We capture light field data by taking many photographs over a plane orthogonal to the optical axis. Using this light field data, we can simulate refocusing depth and adjusting aperture.
+
+#### The light field data I used was the Stanford Light Field archive’s light field dataset. This was given in the form of 17x17 grid of images.
+
+
+## Depth Refocusing
+#### To begin with, I averaged all the images. The initial focal point for the jellybean dataset was on the front objects (the front jellybeans were sharper than the background jellybeans). This was because in the jellybean dataset, the objects that moved the most across the images were the background jellybeans whereas the front jellybeans stay relatively in the same region. For the average of the chess dataset, however, the front chess pieces are blurrier because those objects move around more than chess pieces farther away. Here is the result from this:
