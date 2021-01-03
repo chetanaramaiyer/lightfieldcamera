@@ -1,22 +1,22 @@
-## FINAL PROJECT 1: Lightfield
+FINAL PROJECT 1: Lightfield
 
-## In order to run this project, you just have to open the main.ipynb in jupyter notebook and run all the cells. 
+In order to run this project, you just have to open the main.ipynb in jupyter notebook and run all the cells. 
 
-## Overview
-#### In this project, we are working with light field data. We capture light field data by taking many photographs over a plane orthogonal to the optical axis. Using this light field data, we can simulate refocusing depth and adjusting aperture.
+Overview
+In this project, we are working with light field data. We capture light field data by taking many photographs over a plane orthogonal to the optical axis. Using this light field data, we can simulate refocusing depth and adjusting aperture.
 
-#### The light field data I used was the Stanford Light Field archive’s light field dataset. This was given in the form of 17x17 grid of images.
+The light field data I used was the Stanford Light Field archive’s light field dataset. This was given in the form of 17x17 grid of images.
 
-## Depth Refocusing
-#### To begin with, I averaged all the images. The initial focal point for the jellybean dataset was on the front objects (the front jellybeans were sharper than the background jellybeans). This was because in the jellybean dataset, the objects that moved the most across the images were the background jellybeans whereas the front jellybeans stay relatively in the same region. For the average of the chess dataset, however, the front chess pieces are blurrier because those objects move around more than chess pieces farther away. Here is the result from this:
+Depth Refocusing:
+To begin with, I averaged all the images. The initial focal point for the jellybean dataset was on the front objects (the front jellybeans were sharper than the background jellybeans). This was because in the jellybean dataset, the objects that moved the most across the images were the background jellybeans whereas the front jellybeans stay relatively in the same region. For the average of the chess dataset, however, the front chess pieces are blurrier because those objects move around more than chess pieces farther away. Here is the result from this:
 
-#### In order to refocus the depth, we iterate through all the images and shift them to the center image in the grid. In this case, the center image would be the image at position (8,8). For example, if we are looking at the (i,j)the image, the shift to the center image would be
+In order to refocus the depth, we iterate through all the images and shift them to the center image in the grid. In this case, the center image would be the image at position (8,8). For example, if we are looking at the (i,j)the image, the shift to the center image would be
 shift = (i-8, j-8)* alpha where alpha is some constant. Once we shift for every image (using np.roll), we average all the shifted images, which creates a resulting image to focus at certain parts of the image.
 
-#### Finally, we iterate over a range of alpha values to create an animation of the images focused at different depths.
+Finally, we iterate over a range of alpha values to create an animation of the images focused at different depths.
 
-## Aperature Adjustment
-#### In this part, we could adjust the aperture of the images. First, let’s define what aperture is. Aperture is defined as the measure of how big the opening that allows light in is. Therefore the smaller the aperture, the less light that is let in, which allows it to focus better on specific parts of the image and hence, the image is sharper. On the other hand, larger aperture means you’ll get a blurrier image. In terms of our grid of images, a smaller aperture is represented by letting in less light and therefore averaging less images together.
+Aperature Adjustment:
+In this part, we could adjust the aperture of the images. First, let’s define what aperture is. Aperture is defined as the measure of how big the opening that allows light in is. Therefore the smaller the aperture, the less light that is let in, which allows it to focus better on specific parts of the image and hence, the image is sharper. On the other hand, larger aperture means you’ll get a blurrier image. In terms of our grid of images, a smaller aperture is represented by letting in less light and therefore averaging less images together.
 
-#### In order to simulate changing the aperture while maintaining a constant point of focus, we could take the average of a given radius of images around the center image in the grid (a grid around the center image of size radius * radius). The smaller the radius simulates a smaller aperture because it’ll be more focused.
+In order to simulate changing the aperture while maintaining a constant point of focus, we could take the average of a given radius of images around the center image in the grid (a grid around the center image of size radius * radius). The smaller the radius simulates a smaller aperture because it’ll be more focused.
 
